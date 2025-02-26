@@ -25,5 +25,6 @@
 4. 관계 설정 책임 -> Interface 구현체를 어떤 것을 쓸지 매핑 해주는 곳
 > V5과 V6 참조
 > 이 부분에 대한 그래프 (본 강의 확인)
+> 디자인 패턴에서 사용처들이 다 Client 입장으로서 알게 되는 느낌을 다시 한번 확인 
 
-![img.png](/Users/peterkang/IdeaProjects/spring-six/src/main/resources/image/section3_6.png)
+![관계 설정 책임 분리](resources/images/section3_6.png)
