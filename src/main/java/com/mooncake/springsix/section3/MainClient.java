@@ -1,6 +1,8 @@
 package com.mooncake.springsix.section3;
 
 import com.mooncake.springsix.Payment;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -29,8 +31,23 @@ public class MainClient {
         Payment payment6 = serviceV6.prepareV6(100L, "USD", BigDecimal.valueOf(50.7));
 
         System.out.println(payment6);
-        System.out.println("V6 -----------------------");
+        System.out.println("V6 -- V5의 인터페이스가 적용되어 사용하는 함수단에서 필요한 구현체를 Client 에서 주입하는 모습 -----------------------");
 
+        // ObjectFactory 가 정의해준 PaymentService 를 가져와서 사용해주는 방식으로 변경
+        MyObjectFactory objectFactory = new MyObjectFactory();
+        e_PaymentServiceV6 paymentServiceV7 = objectFactory.paymentService();
+        Payment payment7 = paymentServiceV7.prepareV6(100L, "USD", BigDecimal.valueOf(50.7));
+
+        System.out.println(payment7);
+        System.out.println("V7 MyObjectFactory 까지의 연계 -----------------------");
+
+        /////////////////////////////////////////////
+        // V8 --- 3-9 강의 : Spring 이 해주는 역할체를 사용
+        BeanFactory beanFactory = new AnnotationConfigApplicationContext(MyObjectFactory.class);
+        e_PaymentServiceV6 paymentServiceV8 = beanFactory.getBean(e_PaymentServiceV6.class);
+        Payment payment8 = paymentServiceV8.prepareV6(100L, "USD", BigDecimal.valueOf(50.7));
+        System.out.println(payment7);
+        System.out.println("V8 Spring 개입 시작: Bean 등록 및 관리한 모습 -----------------------");
 
 
     }

@@ -44,7 +44,17 @@ sort() 예시
 > 지금까진  Spring 없이 코드를 짰다. 이제 Spring 이 들어오면서 어떻게 바뀌는지 살펴본다.
 
 
+----------- 
 
 스프링 컨테이너 (IoC / DI 컨테이너)
 > 스프링의 기술 중 가장 핵심에 있고 기반이 되는 기술
+
+![Spring 이 제공해주는 Bean Factory 로 대체된 모습 ](/src/main/resources/image/section3_9.png)
+
+> MainClient.java 의 V8 확인
+> BeanFactory 와 MyObjectFactory Configuration 을 활용해서 유연한 확장을 확인할 수 있었다
+> (MyObjectFactory 의 역할체 변경) - 여기서 DI 가 발생한다
+> 이 BeanFactory 가 Spring 이다 라고 생각해도 과언이 아닐 정도로 중요한 부분
+>> spring 이 객체지향 설계 원칙을 잘 준수한 app 을 만들 수 있도록 도와준다
+
 > 
