@@ -44,3 +44,6 @@ ex) 프린트된 메세지 확인, UI 적용 확인 등
 
 
 ![관계 설정 책임 분리](/src/main/resources/image/section4_5.png)
+
+- PaymentService 가 SUT (System Under Test)
+- 테스트 객체가 시스템으로 주입되고, 외부는 Stub 을 사용하는 모습
