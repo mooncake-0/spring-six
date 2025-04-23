@@ -16,3 +16,6 @@ Section 3: /src/main/java/com/mooncake/springsix/section3/*.md
 <br>
 
 Section 4: /src/test/java/com/mooncake/springsix/section4/*.md
+<br>
+
+Section 4: /src/main/java/com/mooncake/springsix/section5_tpl_ref/*.md
