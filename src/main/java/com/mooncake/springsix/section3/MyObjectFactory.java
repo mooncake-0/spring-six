@@ -14,7 +14,7 @@ public class MyObjectFactory {
     }
 
     public c_ExRateProvider exRateProvider() {
-//        return new c_WebApiExRateProvider(); // 현재 이걸 사용하도록 여기서 등록한다
+//        return new LastWebApiExRateProvider(); // 현재 이걸 사용하도록 여기서 등록한다
         return new c_SimpleExRateProvider();
     }
 }
